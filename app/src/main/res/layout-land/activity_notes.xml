@@ -3,22 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:baselineAligned="false"
     android:orientation="horizontal"
-    tools:context=".NotesActivity"
-    android:baselineAligned="false">
+    tools:context=".NotesActivity">
 
     <fragment
         android:id="@+id/notes"
         android:name="com.example.notes.NotesFragment"
         android:layout_width="@dimen/default_layout_width"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        tools:ignore="InefficientWeight" />
 
-    <fragment
+    <FrameLayout
         android:id="@+id/note_details"
-        android:name="com.example.notes.NoteDetailsFragment"
         android:layout_width="@dimen/default_layout_width"
         android:layout_height="match_parent"
         android:layout_weight="1" />
-
 </LinearLayout>

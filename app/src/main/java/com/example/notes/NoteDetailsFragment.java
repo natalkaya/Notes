@@ -42,14 +42,12 @@ public class NoteDetailsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_note_details, container, false);
         TextView noteTitleView = view.findViewById(R.id.note_title);
         TextView noteDetailsView = view.findViewById(R.id.note_description);
-
-        if (note == null) {
-            note = new Note(0, getResources().getStringArray(R.array.notes)[0],
-                    getResources().getStringArray(R.array.descriptions)[0]);
+        try {
+            noteTitleView.setText(note.getTitle());
+            noteDetailsView.setText(note.getDescription());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-        noteTitleView.setText(note.getTitle());
-        noteDetailsView.setText(note.getDescription());
         return view;
     }
 

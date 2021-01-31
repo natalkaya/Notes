@@ -22,18 +22,9 @@ public class NotesFragment extends Fragment {
     private Note currentNote;
     private boolean isLandscape;
 
-    public static NotesFragment newInstance() {
-        NotesFragment fragment = new NotesFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-        }
     }
 
     @Override
